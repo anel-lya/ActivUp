@@ -13,7 +13,6 @@ class QuoteViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var lblb: UILabel!
     @IBOutlet weak var tb: UITabBarItem!
     var c = 0
-    //var lovedList : [String] = []
     @IBOutlet weak var ind: UIActivityIndicatorView!
     
     @IBOutlet weak var table: UITableView!
@@ -39,29 +38,31 @@ class QuoteViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     override func viewDidAppear(_ animated: Bool) {
         quoteList.shuffle()
+        lblb.text = ""
         self.ind.stopAnimating()
         self.table.reloadData()
     }
     
     @objc func labelTapped() {
             
-        let a = UIAlertController(title: "Понравилась цитата?", message: "Сохрани ее себе в избранные", preferredStyle: .alert)
-        a.addAction(UIAlertAction(title: "да, давайте", style: .cancel, handler: {_ in
-            let l = self.lblb.text!
-            let ll = LovedDataManager.shared.fetchLodevStr()
-            var isExist = false
-            for i in ll {
-                if i.quote == l{
-                    isExist = true
+        if !lblb.text!.isEmpty {
+            let a = UIAlertController(title: "Понравилась цитата?", message: "Сохрани ее себе в избранные", preferredStyle: .alert)
+            a.addAction(UIAlertAction(title: "да, давайте", style: .cancel, handler: {_ in
+                let l = self.lblb.text!
+                let ll = LovedDataManager.shared.fetchLodevStr()
+                var isExist = false
+                for i in ll {
+                    if i.quote == l{
+                        isExist = true
+                    }
                 }
-            }
-            if (!isExist){
-                LovedDataManager.shared.saveLodev(q: l)
-            }
-        }))
-        a.addAction(UIAlertAction(title: "в другой раз", style: .destructive))
-        self.present(a, animated: true)
-        
+                if (!isExist){
+                    LovedDataManager.shared.saveLodev(q: l)
+                }
+            }))
+            a.addAction(UIAlertAction(title: "в другой раз", style: .destructive))
+            self.present(a, animated: true)
+        }
     }
 
     

@@ -6,9 +6,4 @@
     <entity name="Lodev" representedClassName="Lodev" syncable="YES" codeGenerationType="class">
         <attribute name="quote" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="Profile" representedClassName="Profile" syncable="YES" codeGenerationType="class">
-        <attribute name="imgD" optional="YES" attributeType="Binary"/>
-        <attribute name="mail" optional="YES" attributeType="String"/>
-        <attribute name="nick" optional="YES" attributeType="String"/>
-    </entity>
 </model>
