@@ -1,17 +1,9 @@
-//
-//  StartViewController.swift
-//  ActivUp
-//
-//  Created by Anel Rustamova on 05.12.2023.
-//
-
 import UIKit
 
 class StartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
 
@@ -19,17 +11,16 @@ class StartViewController: UIViewController {
         super.viewDidAppear(animated)
         
         let isF = IsFirstDataManager.shared.fetchIsFirst()
-        if (!isF){
+        if (isF){
             start(animated)
         }
         
     }
 
     @IBAction func start(_ sender: Any) {
-        
+
         let new = self.storyboard?.instantiateViewController(withIdentifier: "tabBarController") as? TabBarController
         new!.modalPresentationStyle = .fullScreen
         self.present(new!, animated : false, completion : nil)
-        
     }
 }

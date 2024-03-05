@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		220CCCB02B20929B00E910FA /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220CCCAF2B20929B00E910FA /* Categories.swift */; };
 		220CCCB22B2096A500E910FA /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220CCCB12B2096A500E910FA /* QuoteViewController.swift */; };
 		220CCCB52B2096CF00E910FA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 220CCCB42B2096CF00E910FA /* FirebaseFirestore */; };
 		220CCCB72B20979700E910FA /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 220CCCB62B20979700E910FA /* FirebaseDatabase */; };
@@ -55,7 +54,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		220CCCAF2B20929B00E910FA /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		220CCCB12B2096A500E910FA /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
 		220CCCB92B20BF4100E910FA /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
 		220CCCBC2B20C9AA00E910FA /* LovedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedTableViewCell.swift; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				22DD51C52B1E489B00ADF0F6 /* Quote.swift */,
-				220CCCAF2B20929B00E910FA /* Categories.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -374,7 +371,6 @@
 				22DD51832B1E2F0D00ADF0F6 /* AppDelegate.swift in Sources */,
 				2261300E2B20EE5700772EAA /* VideoViewController.swift in Sources */,
 				22DD51D62B1E66BD00ADF0F6 /* StartViewController.swift in Sources */,
-				220CCCB02B20929B00E910FA /* Categories.swift in Sources */,
 				22DD51852B1E2F0D00ADF0F6 /* SceneDelegate.swift in Sources */,
 				22B4A3712B298A53004AB453 /* IsFirstDataManager.swift in Sources */,
 				220CCCB22B2096A500E910FA /* QuoteViewController.swift in Sources */,
@@ -569,6 +565,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -599,6 +596,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

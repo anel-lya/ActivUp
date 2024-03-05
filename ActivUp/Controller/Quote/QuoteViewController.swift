@@ -1,10 +1,3 @@
-//
-//  QuoteViewController.swift
-//  ActivUp
-//
-//  Created by Anel Rustamova on 06.12.2023.
-//
-
 import UIKit
 
 

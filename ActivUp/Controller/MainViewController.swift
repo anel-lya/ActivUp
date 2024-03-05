@@ -15,15 +15,13 @@ class MainViewController: UIViewController {
     @IBOutlet weak var quote: UILabel!
     @IBOutlet weak var ind: UIActivityIndicatorView!
     @IBOutlet weak var welcomeLbl: UILabel!
-    let welcomeList = ["Welcome в мир возможностей!",
-                       "Это приложение принесет Вам не только знания, но и уверенность в своем будущем.",
-                       "Полезный помощник в Вашем путешествии к успеху.",
-                       "Если Вы это читаете, то это знак того, что Вас ждут увлекательные и успешные моменты.",
-                       "Это приложение принесет вам удовольствие и удовлетворит Ваши ожидания."]
+
+    @IBOutlet weak var author: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLbl.text = welcomeList.randomElement()!
+        
+        welcomeLbl.text = "Вчера – это история, завтра – это загадка, \nсегодня – это подарок."
         if traitCollection.userInterfaceStyle == .dark {
             back = .black
             front = .white
@@ -35,6 +33,10 @@ class MainViewController: UIViewController {
         }
         view.backgroundColor = back
         vvv.backgroundColor = back
+        
+        quote.textColor = front
+        welcomeLbl.textColor = front
+        author.textColor = front
         
         ind.startAnimating()
         ind.center = view.center
