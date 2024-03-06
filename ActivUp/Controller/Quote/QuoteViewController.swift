@@ -31,14 +31,14 @@ class QuoteViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     override func viewDidAppear(_ animated: Bool) {
         quoteList.shuffle()
-        lblb.text = ""
+        lblb.text = "..."
         self.ind.stopAnimating()
         self.table.reloadData()
     }
     
     @objc func labelTapped() {
             
-        if !lblb.text!.isEmpty {
+        if !lblb.text!.isEmpty && lblb.text! != "..." {
             let a = UIAlertController(title: "Понравилась цитата?", message: "Сохрани ее себе в избранные", preferredStyle: .alert)
             a.addAction(UIAlertAction(title: "да, давайте", style: .cancel, handler: {_ in
                 let l = self.lblb.text!

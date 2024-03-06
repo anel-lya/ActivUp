@@ -29,11 +29,13 @@
 		22DD51B82B1E37C300ADF0F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22DD51B52B1E37C300ADF0F6 /* GoogleService-Info.plist */; };
 		22DD51BB2B1E38C500ADF0F6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 22DD51BA2B1E38C500ADF0F6 /* FirebaseAuth */; };
 		22DD51BD2B1E38C500ADF0F6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 22DD51BC2B1E38C500ADF0F6 /* FirebaseStorage */; };
-		22DD51C62B1E489B00ADF0F6 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD51C52B1E489B00ADF0F6 /* Quote.swift */; };
-		22DD51C72B1E489B00ADF0F6 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD51C52B1E489B00ADF0F6 /* Quote.swift */; };
-		22DD51C82B1E489B00ADF0F6 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD51C52B1E489B00ADF0F6 /* Quote.swift */; };
+		22DD51C62B1E489B00ADF0F6 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD51C52B1E489B00ADF0F6 /* File.swift */; };
+		22DD51C72B1E489B00ADF0F6 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD51C52B1E489B00ADF0F6 /* File.swift */; };
+		22DD51C82B1E489B00ADF0F6 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD51C52B1E489B00ADF0F6 /* File.swift */; };
 		22DD51D22B1E62A500ADF0F6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD51D12B1E62A500ADF0F6 /* TabBarController.swift */; };
 		22DD51D62B1E66BD00ADF0F6 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD51D52B1E66BD00ADF0F6 /* StartViewController.swift */; };
+		22F32C722B9841E500E786D3 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F32C712B9841E500E786D3 /* BooksViewController.swift */; };
+		22F32C742B9841FE00E786D3 /* BooksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F32C732B9841FE00E786D3 /* BooksTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,9 +76,11 @@
 		22DD51982B1E2F0E00ADF0F6 /* ActivUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActivUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22DD51A22B1E2F0E00ADF0F6 /* ActivUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActivUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22DD51B52B1E37C300ADF0F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		22DD51C52B1E489B00ADF0F6 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		22DD51C52B1E489B00ADF0F6 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		22DD51D12B1E62A500ADF0F6 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		22DD51D52B1E66BD00ADF0F6 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		22F32C712B9841E500E786D3 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		22F32C732B9841FE00E786D3 /* BooksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,7 @@
 		22DD51BE2B1E473D00ADF0F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				22F32C702B9841B700E786D3 /* Books */,
 				2261300C2B20EE3A00772EAA /* Videos */,
 				220CCCBB2B20C99300E910FA /* Loved */,
 				220CCCB82B20BF2700E910FA /* Quote */,
@@ -193,7 +198,7 @@
 		22DD51BF2B1E474900ADF0F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				22DD51C52B1E489B00ADF0F6 /* Quote.swift */,
+				22DD51C52B1E489B00ADF0F6 /* File.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,6 +220,15 @@
 				22B4A3702B298A53004AB453 /* IsFirstDataManager.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		22F32C702B9841B700E786D3 /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				22F32C712B9841E500E786D3 /* BooksViewController.swift */,
+				22F32C732B9841FE00E786D3 /* BooksTableViewCell.swift */,
+			);
+			path = Books;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,15 +375,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				220CCCC12B20E06700E910FA /* LovedDataManager.swift in Sources */,
+				22F32C722B9841E500E786D3 /* BooksViewController.swift in Sources */,
 				2279EBF82B27A83600880C20 /* VideoTableViewCell.swift in Sources */,
 				220CCCBD2B20C9AA00E910FA /* LovedTableViewCell.swift in Sources */,
 				22DD518D2B1E2F0D00ADF0F6 /* ActivUp.xcdatamodeld in Sources */,
 				22539D522B617C9600C6F239 /* MainViewController.swift in Sources */,
 				220CCCBA2B20BF4100E910FA /* QuoteTableViewCell.swift in Sources */,
 				22DD51D22B1E62A500ADF0F6 /* TabBarController.swift in Sources */,
-				22DD51C62B1E489B00ADF0F6 /* Quote.swift in Sources */,
+				22DD51C62B1E489B00ADF0F6 /* File.swift in Sources */,
 				22DD51832B1E2F0D00ADF0F6 /* AppDelegate.swift in Sources */,
 				2261300E2B20EE5700772EAA /* VideoViewController.swift in Sources */,
+				22F32C742B9841FE00E786D3 /* BooksTableViewCell.swift in Sources */,
 				22DD51D62B1E66BD00ADF0F6 /* StartViewController.swift in Sources */,
 				22DD51852B1E2F0D00ADF0F6 /* SceneDelegate.swift in Sources */,
 				22B4A3712B298A53004AB453 /* IsFirstDataManager.swift in Sources */,
@@ -382,7 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22DD51C72B1E489B00ADF0F6 /* Quote.swift in Sources */,
+				22DD51C72B1E489B00ADF0F6 /* File.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22DD51C82B1E489B00ADF0F6 /* Quote.swift in Sources */,
+				22DD51C82B1E489B00ADF0F6 /* File.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

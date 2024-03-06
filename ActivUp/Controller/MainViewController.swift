@@ -11,6 +11,7 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var vvv: UIView!
     @IBOutlet weak var video: UILabel!
+    @IBOutlet weak var book: UILabel!
     
     @IBOutlet weak var quote: UILabel!
     @IBOutlet weak var ind: UIActivityIndicatorView!
@@ -42,6 +43,7 @@ class MainViewController: UIViewController {
         ind.center = view.center
         loadQuotes()
         loadVideos()
+        loadBooks()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -50,6 +52,7 @@ class MainViewController: UIViewController {
         if !quoteList.isEmpty {
             quote.text = quoteList.randomElement()!
             video.text = videoList.randomElement()!
+            book.text = booksList.randomElement()!
         }
       
     }
@@ -74,6 +77,16 @@ class MainViewController: UIViewController {
         self.present(new, animated : true, completion : nil)
     }
     
+    @IBAction func goBook(_ sender: Any) {
+        let new = self.storyboard?.instantiateViewController(withIdentifier: "tabBarController") as! TabBarController
+        new.modalPresentationStyle = .fullScreen
+        new.modalTransitionStyle = .flipHorizontal
+        
+        new.selectedIndex = 4
+        
+        self.present(new, animated : true, completion : nil)
+    }
+    
     func loadQuotes() {
         Database.database().reference(fromURL: "https://activup-b45a2-default-rtdb.firebaseio.com/quotes").observe(.value, with: {(r) in
             let value = r.value as! [Any]
@@ -84,8 +97,7 @@ class MainViewController: UIViewController {
                 }
             }
             self.quote.text = quoteList.randomElement()!
-            self.vvv.isHidden = true
-            self.ind.stopAnimating()
+         
         })
     }
     
@@ -100,6 +112,21 @@ class MainViewController: UIViewController {
                 }
             }
             self.video.text = videoList.randomElement()!
+        })
+    }
+    
+    func loadBooks() {
+        Database.database().reference(fromURL: "https://activup-b45a2-default-rtdb.firebaseio.com/books").observe(.value, with: {(r) in
+            let value = r.value as! [Any]
+            booksList = []
+            for elem in value {
+                if let e = elem as? String {
+                    booksList.append(e)
+                }
+            }
+            self.book.text = booksList.randomElement()!
+            self.vvv.isHidden = true
+            self.ind.stopAnimating()
         })
     }
     
