@@ -51,7 +51,7 @@ class MainViewController: UIViewController {
         
         if !quoteList.isEmpty {
             quote.text = quoteList.randomElement()!
-            video.text = videoList.randomElement()!
+            video.text = String((videoList.randomElement()!).split(separator: "|")[0])
             book.text = booksList.randomElement()!
         }
       
@@ -111,7 +111,7 @@ class MainViewController: UIViewController {
                     videoList.append(e)
                 }
             }
-            self.video.text = videoList.randomElement()!
+            self.video.text = String((videoList.randomElement()!).split(separator: "|")[0])
         })
     }
     
