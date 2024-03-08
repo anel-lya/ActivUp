@@ -12,7 +12,7 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableBook.delegate = self
 
         tableBook.rowHeight = UITableView.automaticDimension
-        tableBook.estimatedRowHeight = 200.0
+        tableBook.estimatedRowHeight = 100.0
         
         view.backgroundColor = back
         tableBook.backgroundView?.backgroundColor = back
