@@ -13,7 +13,6 @@ class BooksTableViewCell: UITableViewCell {
         lblAu.textColor = front
         lblBook.textColor = front
         
-        print(front, back)
         
     }
 
