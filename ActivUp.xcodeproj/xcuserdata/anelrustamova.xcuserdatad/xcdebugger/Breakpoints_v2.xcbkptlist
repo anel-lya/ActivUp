@@ -82,38 +82,6 @@
             endingLineNumber = "13"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "AFAB2B0C-976B-4D97-B55F-11D5F1AFD865 - cd18f07f276f4e9a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ActivUp.StartViewController.viewDidAppear(Swift.Bool) -&gt; ()"
-                  moduleName = "ActivUp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anelrustamova/Desktop/ActivUp/ActivUp/Controller/StartViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "152">
-               </Location>
-               <Location
-                  uuid = "AFAB2B0C-976B-4D97-B55F-11D5F1AFD865 - cd18f07f276f4e45"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ActivUp.StartViewController.viewDidAppear(Swift.Bool) -&gt; ()"
-                  moduleName = "ActivUp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anelrustamova/Desktop/ActivUp/ActivUp/Controller/StartViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "152">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
